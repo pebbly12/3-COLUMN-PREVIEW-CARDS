@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --bark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-size: 15px;
+  font-family: "Poppins", serif;
+  min-height: 100vh;
+  background-color: var(--very-light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_card {
+  margin: 35px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_card .first_card {
+  background: var(--bright-orange);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.first_card div {
+  margin: 30px;
+}
+
+.first_card div img {
+  margin-top: 10px;
+  width: 3.5rem;
+}
+
+div > h1 {
+  color: var(--white);
+  font-family: "Big Shoulders Display", serif;
+  font-size: 2.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.first_card p {
+  color: var(--transparent-white);
+  margin-top: 20px;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.first_card .button {
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 12px;
+  width: 120px;
+  font-weight: 500;
+  color: var(--bright-orange);
+  background-color: var(--white);
+}
+
+.first_card .button:hover {
+  cursor: pointer;
+  border: 2px solid var(--white);
+  color: var(--white);
+  background-color: var(--bright-orange);
+}
+
+/* Second Card Styles */
+
+.main_card .second_card {
+  background: var(--bark-cyan);
+}
+
+.second_card div {
+  margin: 30px;
+}
+
+.second_card div img {
+  margin-top: 10px;
+  width: 3.5rem;
+}
+
+.second_card p {
+  color: var(--transparent-white);
+  margin-top: 20px;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.second_card .button {
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 12px;
+  width: 120px;
+  color: var(--bark-cyan);
+  background-color: var(--white);
+}
+
+.second_card .button:hover {
+  cursor: pointer;
+  border: 2px solid var(--white);
+  color: var(--white);
+  background-color: var(--bark-cyan);
+}
+
+/* Third Card Styles */
+
+.main_card .third_card {
+  background: var(--very-dark-cyan);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.third_card div {
+  margin: 30px;
+}
+
+.third_card div img {
+  margin-top: 10px;
+  width: 3.5rem;
+}
+
+.third_card p {
+  color: var(--transparent-white);
+  margin-top: 20px;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.third_card .button {
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 12px;
+  width: 120px;
+  color: var(--bark-cyan);
+  background-color: var(--white);
+}
+
+.third_card .button:hover {
+  cursor: pointer;
+  border: 2px solid var(--white);
+  color: var(--white);
+  background-color: var(--very-dark-cyan);
+}
+
+/* Media Query */
+@media (min-width: 1200px) {
+  .main_card {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    margin: 0 auto;
+  }
+
+  .main_card .first_card {
+    border-bottom-left-radius: 7px;
+    border-top-right-radius: 0;
+  }
+
+  .main_card .first_card p {
+    width: 11rem;
+  }
+
+  .main_card .first_card .button {
+    margin-top: 70px;
+  }
+
+  .main_card .second_card p {
+    width: 11.5rem;
+  }
+  .main_card .second_card .button {
+    margin-top: 70px;
+  }
+
+  .main_card .third_card {
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 0;
+  }
+  .main_card .third_card .button {
+    margin-top: 70px;
+  }
+}
